@@ -97,9 +97,9 @@ window.onload = function(){
       label.text = `${time}`;
     })
     //
-    bear.on('touchstart',function(){
+    /*bear.on('touchstart',function(){
       core.rootScene.removeChild(this);
-    });
+    });*/
 
     core.rootScene.on('touchmove',function(e){
       // bear.x = e.x;
