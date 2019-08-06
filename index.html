@@ -7,8 +7,8 @@
     <title></title>
     <style media="screen">
       body{
-        width: 900px;
-        height: 900px;
+        width: 700px;
+        height: 700px;
         margin: 10px auto;
         background-size: auto auto;
         background-color: rgba(218, 251, 255, 1);
@@ -16,6 +16,7 @@
         transparent, transparent 20px,
         rgba(255, 155, 207, 1) 20px,
         rgba(255, 155, 207, 1) 50px );
+        user-select: none;
       }
       iframe{
         border: 1px solid pink;
@@ -24,9 +25,35 @@
         box-shadow: 0 0 20px gray;
         background: #ffeeff
       }
+      #rbtn{
+        width: 150px;
+        height: 50px;
+        background: linear-gradient(180deg,deeppink,pink);
+        line-height: 50px;
+        text-align: center;
+        position: absolute;
+        margin: 20px 275px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px gray,
+                    0 0 20px #fff inset;
+      }
+      #rbtn:active{
+        box-shadow: 0 0 20px #fff inset;
+      }
     </style>
   </head>
   <body>
-    <iframe src="game.html" width="900px" height="900px" scrolling="no" frameborder="0" ></iframe>
+    <iframe src="game.html" width="700px" height="700px" scrolling="no" frameborder="0" ></iframe>
+    <div id="rbtn">リロード</div>
+
+    <script type="text/javascript">
+      rbtn.addEventListener('click',function(){
+        location.reload();
+      })
+
+      window.document.onkeydown = function(event){
+        if (event.key === 'Enter') location.reload();
+      }
+    </script>
   </body>
 </html>
