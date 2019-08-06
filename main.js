@@ -16,8 +16,8 @@ window.onload = function(){
   core.onload = function(){
     var bear = new Sprite(32,32);
     bear.image = core.assets['chara1.png'];
-    bear.x = 0;
-    bear.y = 0;
+    bear.x = 150;
+    bear.y = 150;
     bear.frame = 0;
 
     bear.addEventListener('enterframe',function(){
