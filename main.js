@@ -48,7 +48,7 @@ window.onload = function(){
     enemy.x = 80;
     enemy.y = 0;
     enemy.frame = 4;
-
+    
     enemy.addEventListener('enterframe',function(){
       enemy.frame = this.age % 3 + 3;
       if (this.x <= bear.x) {
