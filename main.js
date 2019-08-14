@@ -48,14 +48,6 @@ window.onload = function(){
     enemy.x = 80;
     enemy.y = 0;
     enemy.frame = 4;
-    
-    var enemys = [];
-    for(var i = 0; i < 100;i++){
-      bear[i] = new enemy(rand(320),rand(320));
-    }
-    function rand(n){
-      return Math.floor(Math.random()*(n+1)):
-    }
 
     enemy.addEventListener('enterframe',function(){
       enemy.frame = this.age % 3 + 3;
